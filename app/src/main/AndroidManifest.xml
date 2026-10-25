@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 名单管理需要枚举已安装应用（Android 11+ 包可见性） -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <!-- 模块设置界面需要检测系统界面组件/实况通知的安装状态（Android 11+ 包可见性） -->
+    <queries>
+        <package android:name="com.android.systemui" />
+        <package android:name="miui.systemui.plugin" />
+        <package android:name="com.spark.noticeflow" />
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".IslandPassApplication"
+        android:allowBackup="true"
+        android:description="@string/module_description"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IslandPass"
+        tools:ignore="AllowBackup">
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.IslandPass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <!-- 名单管理二级页（白/黑名单勾选编辑；EXTRA_LIST_ID 非空时为个性名单内容编辑） -->
+        <activity
+            android:name=".ui.ListManageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.IslandPass" />
+
+        <!-- 名单库三级页（个性名单创建/导入/导出/启用/重命名/删除） -->
+        <activity
+            android:name=".ui.ListLibraryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.IslandPass" />
+
+        <!-- 主题设置二级页（明暗模式 / Monet / 悬浮底栏 / 缩放 / 动画） -->
+        <activity
+            android:name=".ui.ThemeSettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.IslandPass" />
+
+        <activity-alias
+            android:name=".Launcher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:targetActivity=".ui.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+    </application>
+</manifest>

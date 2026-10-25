@@ -1,0 +1,21 @@
+# Gradle / Android 构建产物
+build/
+.gradle/
+.kotlin/
+local.properties
+captures/
+
+# 签名密钥（永不入库；密码经用户级 ~/.gradle/gradle.properties 提供）
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# 日志与临时文件
+*.log
+*.tmp

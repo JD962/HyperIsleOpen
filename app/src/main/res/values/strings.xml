@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HyperIsleOpen</string>
+    <!-- libxposed 模块描述（管理器读取 android:description） -->
+    <string name="module_description">剔除小米超级岛白名单/签名限制，支持上岛黑白名单管理，并将实况通知 SDK 的岛映射至系统原生超级岛。仅支持 HyperOS Android 15+。</string>
+    <string name="subtitle">超级岛白名单解锁 · 实况通知原生映射</string>
+    <string name="version_limit">仅支持 Android 15/16 · 澎湃OS 3.300 及以上</string>
+
+    <!-- 底部导航 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_config">配置</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- ========== 首页 ========== -->
+    <string name="home_overall_ok">工作正常</string>
+    <string name="home_overall_checking">检查中…</string>
+    <string name="home_overall_suspect">状态待确认</string>
+    <string name="home_overall_failed">未生效</string>
+    <string name="home_overall_disabled">部分功能已在配置页关闭，未参与检查</string>
+    <string name="home_overall_desc_ok">全部钩子已就绪，超级岛已解锁</string>
+    <string name="home_overall_desc_checking">正在向系统界面通信…</string>
+    <string name="home_overall_desc_suspect">模块已激活且宿主进程存活，但通信无响应，可能被系统限制</string>
+    <string name="home_overall_desc_failed">请检查下方状态与作用域勾选</string>
+    <string name="home_scope_banner">作用域已确认 · 保存与重启可用</string>
+
+    <string name="section_status">工作状态</string>
+    <string name="section_module_info">模块信息</string>
+    <string name="home_detail_title">注入明细</string>
+    <string name="label_module_version">模块版本</string>
+    <string name="label_sysui_plugin">系统界面组件</string>
+    <string name="label_noticeflow">实况通知</string>
+    <string name="label_device">设备</string>
+    <string name="label_system">系统</string>
+    <string name="value_module_version">HyperIsleOpen %1$s (Build %2$d)</string>
+    <string name="value_not_installed">未安装</string>
+    <string name="value_not_detected">未检测到</string>
+    <string name="detail_no_data">无数据</string>
+    <string name="detail_hook_installed">已安装</string>
+    <string name="detail_hook_failed">未生效</string>
+    <string name="detail_error_title">注入错误</string>
+    <string name="status_module">模块启用</string>
+    <string name="state_module_ok">已启用 · 设置页运行中</string>
+    <string name="status_sysui_inject">系统界面注入</string>
+    <string name="status_noticeflow_inject">实况通知注入</string>
+
+    <string name="state_checking">检查中…</string>
+    <string name="status_disabled">功能已关闭</string>
+    <string name="state_failed">无响应</string>
+    <string name="status_suspect">状态待确认 · 已勾选但通信无响应</string>
+    <string name="status_hooks_ok">注入正常 · %1$d 项钩子全部就绪</string>
+    <string name="status_hooks_failed">注入异常 · %1$d 项钩子未生效</string>
+    <string name="status_host_offline">未激活、作用域未勾选或宿主未启动</string>
+    <string name="status_sysui_plugin">系统界面组件：%1$s</string>
+    <string name="status_noticeflow_version">实况通知：%1$s</string>
+    <string name="status_noticeflow_absent">未安装，相关设置已隐藏</string>
+    <string name="action_open_noticeflow">点此打开实况通知</string>
+    <string name="btn_recheck">重新检查</string>
+
+    <string name="section_scope">作用域勾选</string>
+    <string name="scope_sysui_title">com.android.systemui</string>
+    <string name="scope_noticeflow_title">com.spark.noticeflow</string>
+    <string name="scope_confirmed">已勾选</string>
+    <string name="scope_suspect">待确认</string>
+    <string name="scope_missing">未勾选或未生效</string>
+    <string name="scope_not_installed">未安装（可跳过）</string>
+    <string name="scope_disabled">未启用（功能已关闭）</string>
+    <string name="scope_warning_main">请在 LSPosed 管理器中勾选 com.android.systemui（必需）与 com.spark.noticeflow（映射 SDK 时必需），然后重启对应应用。</string>
+    <string name="scope_warning_partial">实况通知无响应：如已勾选作用域，点重新检查将自动拉起并再次探测。</string>
+    <string name="scope_warning_suspect">宿主进程存活但通信无响应：可能被系统冻结或后台限制，模块已激活。点「重新检查」再次确认。</string>
+
+    <string name="compat_fail">设备不兼容：仅支持 Android 15/16 + 澎湃OS 3.300 及以上，注入已自动禁用。</string>
+
+    <!-- ========== 配置页 ========== -->
+    <string name="section_features">功能开关</string>
+    <string name="label_bypass">剔除上岛白名单/签名限制</string>
+    <string name="desc_bypass">放行澎湃 OS 超级岛的白名单与签名校验，任何应用的焦点通知均可上岛。</string>
+    <string name="label_sdk_mapping">SDK 岛映射至原生超级岛</string>
+    <string name="desc_sdk_mapping">让实况通知的 SDK 岛走系统原生通道渲染，不再依赖 Shizuku 断网绕过。</string>
+    <string name="noticeflow_absent">未检测到实况通知，SDK 映射相关设置已隐藏。</string>
+
+    <string name="section_list">上岛名单</string>
+    <string name="list_overlay_desc">白名单与黑名单相互独立、可单独启停：黑名单优先拦截，白名单仅放行名单内应用（留空则不限制）。两个开关都关闭时，名单功能整体不生效。</string>
+    <string name="list_white_title">白名单</string>
+    <string name="list_black_title">黑名单</string>
+    <string name="list_enable_white">启用白名单</string>
+    <string name="list_enable_black">启用黑名单</string>
+    <string name="list_state_disabled">未启用 · 不参与判定</string>
+    <string name="list_state_white_on">已启用 · 仅名单内 %1$d 个应用可上岛</string>
+    <string name="list_state_white_empty">已启用 · 名单为空（不限制上岛）</string>
+    <string name="list_state_black_on">已启用 · 名单内 %1$d 个应用不可上岛</string>
+    <string name="list_state_black_empty">已启用 · 名单为空</string>
+    <string name="list_manage_entry_desc_white">编辑全局名单，或进入名单库管理多个名单</string>
+    <string name="list_manage_entry_desc_black">编辑全局名单，或进入名单库管理多个名单</string>
+    <string name="list_library_hint">可在名单库中创建多个名单并叠加使用，支持导入导出</string>
+
+    <string name="section_actions">操作</string>
+    <string name="btn_restart">重启作用域应用</string>
+    <string name="desc_restart">选择需要重启的应用（可多选），重启后配置生效</string>
+
+    <string name="dialog_restart_title">重启作用域应用</string>
+    <string name="dialog_restart_desc">勾选需要重启的应用，未保存的开关将在重启后生效</string>
+    <string name="dialog_root_title">Root 权限</string>
+    <string name="root_state_granted">已授予 · 可执行重启</string>
+    <string name="root_state_denied">未检测到 Root 权限</string>
+    <string name="root_state_checking">检测中…</string>
+    <string name="root_retry">重新检测</string>
+    <string name="root_needed_desc">重启系统进程需要 Root 权限（Magisk / KernelSU）</string>
+    <string name="dialog_restart_sysui">系统界面（com.android.systemui）</string>
+    <string name="dialog_restart_sysui_sub">系统界面为常驻进程，kill 后由系统自动拉起</string>
+    <string name="dialog_restart_noticeflow">实况通知（com.spark.noticeflow）</string>
+    <string name="dialog_restart_noticeflow_sub">重启后由本模块自动重新拉起</string>
+    <string name="dialog_restart_confirm">立即重启</string>
+    <string name="dialog_restart_cancel">取消</string>
+    <string name="toast_restart_sent">重启指令已发送</string>
+    <string name="toast_restart_none">请先勾选要重启的应用</string>
+    <string name="toast_root_required">未授予 Root 权限，无法重启作用域应用</string>
+    <string name="toast_restart_partial">部分应用重启失败，请检查 Root 授权</string>
+
+    <!-- ========== 设置页 ========== -->
+    <string name="section_appearance">外观</string>
+    <string name="settings_theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="btn_back">返回</string>
+
+    <!-- ========== 主题设置二级页 ========== -->
+    <string name="theme_settings_title">主题</string>
+    <string name="theme_preview_title">主题预览</string>
+    <string name="theme_preview_sample">示例文本：当前取色方案的显示效果</string>
+    <string name="theme_swatch_primary">主色</string>
+    <string name="theme_swatch_surface">表面</string>
+    <string name="theme_swatch_on_surface">文字</string>
+    <string name="theme_swatch_error">错误</string>
+    <string name="section_theme_mode">明暗模式</string>
+    <string name="settings_monet">Monet 动态取色</string>
+    <string name="settings_monet_desc">跟随系统壁纸自动生成主题配色</string>
+    <string name="settings_monet_unsupported">Monet 动态取色需 Android 12 及以上</string>
+    <string name="settings_floating_bar">悬浮底栏</string>
+    <string name="settings_floating_bar_desc">底部导航栏改为圆角悬浮样式</string>
+    <string name="settings_nav_icon_only">导航仅图标</string>
+    <string name="settings_nav_icon_only_desc">底部导航仅显示图标，隐藏文字标签</string>
+    <string name="settings_ui_scale">界面缩放</string>
+    <string name="settings_ui_scale_desc">调整全局界面显示比例（85% ~ 115%）</string>
+    <string name="settings_ui_scale_value">%1$d%%</string>
+    <string name="settings_page_anim">页面切换动画</string>
+    <string name="settings_page_anim_desc">切换底部导航页面时播放过渡动画</string>
+
+    <string name="section_troubleshoot">排障</string>
+    <string name="settings_verbose">详细日志</string>
+    <string name="settings_verbose_desc">在系统日志（logcat）输出注入过程明细，排障时开启</string>
+    <string name="settings_debug">调试模式</string>
+    <string name="settings_debug_desc">首页显示注入明细与原始数据</string>
+
+    <string name="section_about">关于</string>
+    <string name="settings_about">关于 HyperIsleOpen</string>
+    <string name="about_version">版本</string>
+    <string name="about_signature">签名证书</string>
+    <string name="about_license">开源许可</string>
+    <string name="about_desc">剔除小米超级岛对上岛应用的签名/白名单限制，将实况通知 SDK 的岛映射至系统原生超级岛。基于 libxposed API 102 + HookTool 构建。</string>
+    <string name="about_license_text">libxposed · Apache-2.0\nHookTool · LGPL-2.1\nMiuix · Apache-2.0</string>
+    <string name="about_dialog_close">关闭</string>
+
+    <!-- ========== 名单管理二级页 ========== -->
+    <string name="applist_title_black">黑名单管理</string>
+    <string name="applist_title_white">白名单管理</string>
+    <string name="applist_hint_black">名单内的应用不可上岛</string>
+    <string name="applist_hint_white">仅名单内的应用可上岛</string>
+    <string name="applist_search_hint">搜索应用名称或包名</string>
+    <string name="applist_empty">没有匹配的应用</string>
+    <string name="applist_show_system">显示系统应用</string>
+    <string name="applist_manual">手动输入包名</string>
+    <string name="applist_manual_title">输入包名</string>
+    <string name="applist_manual_hint">如 com.tencent.mm</string>
+    <string name="applist_manual_confirm">添加</string>
+    <string name="applist_manual_cancel">取消</string>
+    <string name="applist_manual_invalid">包名格式不正确</string>
+    <string name="applist_manual_dup">该包名已在名单中</string>
+    <string name="applist_manual_added">已添加 %1$s</string>
+    <string name="applist_selected_count">已选 %1$d 个</string>
+    <string name="applist_editing_global">正在编辑全局名单，勾选即时保存并生效</string>
+    <string name="applist_editing_named">正在编辑个性名单「%1$s」，勾选即时保存</string>
+    <string name="applist_editing_personal_hint">个性名单的改动在启用后与全局名单叠加生效</string>
+    <string name="applist_manual_note">手动添加的包名以勾选状态出现在顶部，取消勾选即从名单移除（未安装的仅显示包名与占位图标）</string>
+    <string name="applist_list_missing">该名单已被删除</string>
+    <string name="btn_save_as_personal">保存为个性名单</string>
+    <string name="dialog_save_as_personal_title">保存为个性名单</string>
+    <string name="toast_list_saved_as_personal">已保存为个性名单「%1$s」，未启用</string>
+    <string name="entry_list_library">名单库</string>
+    <string name="entry_list_library_desc">创建、导入或启用多个名单，与全局名单叠加生效</string>
+
+    <!-- 名单库（三级页） -->
+    <string name="lib_title_white">白名单库</string>
+    <string name="lib_title_black">黑名单库</string>
+    <string name="lib_overlay_desc">勾选启用的名单与全局名单叠加生效；允许创建重名或内容重复的名单。</string>
+    <string name="lib_create">创建名单</string>
+    <string name="lib_import">导入名单</string>
+    <string name="lib_empty">还没有个性名单，点击上方创建或导入</string>
+    <string name="lib_item_meta">%1$d 个应用 · 更新于 %2$s</string>
+    <string name="lib_enabled_badge">已启用 · 叠加生效</string>
+    <string name="lib_edit_content">编辑名单内容</string>
+    <string name="lib_menu_rename">重命名</string>
+    <string name="lib_menu_export">导出</string>
+    <string name="lib_menu_delete">删除名单</string>
+    <string name="lib_name_hint">请输入名单名称</string>
+    <string name="dialog_create_list_title">创建名单</string>
+    <string name="dialog_rename_list_title">重命名名单</string>
+    <string name="dialog_delete_list_title">删除名单</string>
+    <string name="dialog_delete_list_message">确定删除名单「%1$s」？删除后不可恢复。</string>
+    <string name="toast_list_created">已创建名单「%1$s」</string>
+    <string name="toast_list_renamed">已重命名为「%1$s」</string>
+    <string name="toast_list_deleted">已删除「%1$s」</string>
+    <string name="toast_list_imported">已导入「%1$s」，未启用</string>
+    <string name="toast_list_import_failed">导入失败：不是有效的名单文件</string>
+    <string name="toast_list_import_type_mismatch">导入失败：文件类型与当前名单库不一致</string>
+    <string name="toast_list_exported">已导出到所选位置</string>
+    <string name="toast_list_export_failed">导出失败</string>
+</resources>

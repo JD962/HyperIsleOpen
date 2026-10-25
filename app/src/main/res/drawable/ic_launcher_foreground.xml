@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 主岛（胶囊） -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,44 H72 A10,10 0 0 1 82,54 A10,10 0 0 1 72,64 H46 A10,10 0 0 1 36,54 A10,10 0 0 1 46,44 Z" />
+    <!-- 岛内圆点（挖空效果由背景透出） -->
+    <path
+        android:fillColor="#E8590C"
+        android:pathData="M42.5,54 A3.5,3.5 0 1 1 49.5,54 A3.5,3.5 0 1 1 42.5,54 Z" />
+    <!-- 小岛（迷你态） -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.92"
+        android:pathData="M56,74 H74 A4,4 0 0 1 78,78 A4,4 0 0 1 74,82 H56 A4,4 0 0 1 52,78 A4,4 0 0 1 56,74 Z" />
+</vector>

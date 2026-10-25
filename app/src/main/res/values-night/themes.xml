@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.IslandPass" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 强制深色时窗口背景跟随（Miuix 深色 surface 0xFF080808） -->
+        <item name="android:windowBackground">@color/window_background_dark</item>
+    </style>
+</resources>

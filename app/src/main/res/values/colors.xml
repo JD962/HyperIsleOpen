@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface">#FFF6EE</color>
+    <color name="surface_container">#FFFDFA</color>
+    <color name="on_surface">#211913</color>
+    <color name="on_surface_variant">#6D5F52</color>
+    <color name="accent">#E8590C</color>
+    <color name="accent_dark">#B24400</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ic_launcher_background">#E8590C</color>
+</resources>

@@ -1,0 +1,36 @@
+[versions]
+agp = "9.2.1"
+kotlin = "2.4.0"
+libxposed-api = "102.0.0"
+libxposed-service = "102.0.0"
+hooktool = "3.2.2"
+androidx-core-ktx = "1.19.0"
+androidx-appcompat = "1.7.1"
+material = "1.14.0"
+compose-bom = "2026.09.00"
+activity-compose = "1.13.0"
+miuix = "0.9.4"
+junit = "4.13.2"
+androidx-test-junit = "1.3.0"
+androidx-test-espresso-core = "3.7.0"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+[libraries]
+libxposed-api = { group = "io.github.libxposed", name = "api", version.ref = "libxposed-api" }
+libxposed-service = { group = "io.github.libxposed", name = "service", version.ref = "libxposed-service" }
+hooktool = { group = "com.github.HChenX", name = "HookTool", version.ref = "hooktool" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+miuix-ui = { group = "top.yukonga.miuix.kmp", name = "miuix-ui-android", version.ref = "miuix" }
+miuix-icons = { group = "top.yukonga.miuix.kmp", name = "miuix-icons-android", version.ref = "miuix" }
+miuix-preference = { group = "top.yukonga.miuix.kmp", name = "miuix-preference-android", version.ref = "miuix" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
+androidx-test-espresso-core = { group = "androidx.test", name = "espresso", version.ref = "androidx-test-espresso-core" }
